@@ -1,0 +1,7 @@
+# Dependências mínimas para SERVIR o modelo (imagem Docker leve)
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.5
+numpy>=1.26
+pandas>=2.1
+xgboost-cpu>=2.0

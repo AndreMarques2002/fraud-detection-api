@@ -1,0 +1,24 @@
+{
+  "environment": {
+    "python": "3.12.3",
+    "machine": "x86_64",
+    "cpu_count": 1,
+    "note": "uvicorn, 1 worker, localhost, cliente s\u00edncrono"
+  },
+  "n_requests": 1500,
+  "single_request_client_ms": {
+    "p50": 3.0329869999832226,
+    "p95": 3.61795689997848,
+    "p99": 4.279864679964476
+  },
+  "single_request_server_ms": {
+    "p50": 1.45,
+    "p95": 1.837,
+    "p99": 2.1720200000000003
+  },
+  "throughput_single_req_per_s": 332.32587857044354,
+  "batch_100_client_ms": {
+    "p50": 34.595108500042215,
+    "p95": 58.734327150006045
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "model_version": "v0.1.0",
+  "created_at": "2026-11-11T23:56:16+00:00",
+  "data_source": "Fraud Detection Handbook (dados simulados) - ver data/README.md",
+  "synthetic_data": false,
+  "snapshot_date": "2018-10-01",
+  "features": [
+    "amount",
+    "hour",
+    "is_weekend",
+    "is_night",
+    "amount_ratio_30",
+    "cust_nb_tx_1",
+    "cust_nb_tx_7",
+    "cust_nb_tx_30",
+    "cust_avg_amt_1",
+    "cust_avg_amt_7",
+    "cust_avg_amt_30",
+    "term_nb_tx_1",
+    "term_nb_tx_7",
+    "term_nb_tx_30",
+    "term_risk_1",
+    "term_risk_7",
+    "term_risk_30"
+  ],
+  "thresholds": {
+    "review": 0.0305961761623621,
+    "block": 0.37602007389068604
+  },
+  "cost_assumptions": {
+    "review_cost": 2.0,
+    "target_block_precision": 0.9,
+    "min_block_alerts": 50
+  },
+  "train_days": [
+    37,
+    113
+  ],
+  "val_days": [
+    120,
+    150
+  ],
+  "test_days": [
+    157,
+    183
+  ],
+  "test_metrics": {
+    "pr_auc": 0.7481438163588209,
+    "roc_auc": 0.8986831209847341,
+    "precision_at_100_per_day": 0.6257692307692307,
+    "fraud_amount_captured_at_100_per_day": 0.8855140703970967,
+    "fraud_rate": 0.008804658413718755,
+    "n": 249527
+  },
+  "test_policy": {
+    "review_threshold": 0.0305961761623621,
+    "block_threshold": 0.37602007389068604,
+    "alerts_per_day": 138.65384615384616,
+    "blocked_per_day": 63.5,
+    "precision_flagged": 0.47045769764216366,
+    "precision_blocked": 0.8909751665657177,
+    "recall_count": 0.7719617660446063,
+    "fraud_amount_total": 281970.72,
+    "fraud_amount_caught": 254534.31,
+    "fraud_amount_caught_pct": 0.9026976630765068,
+    "cost_no_model": 281970.72,
+    "cost_with_model": 34646.409999999974,
+    "cost_reduction_pct": 0.8771276322591226
+  },
+  "libs": {
+    "xgboost": "3.4.1",
+    "numpy": "2.5.4",
+    "python": "3.12.3"
+  }
+}
